@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+      // search方法，没找到的返回iu-1,不支持全局搜索，因为忽略了正则表达式
+      console.log('JavaScript'.search(/script/i)) // 4
+
+      const text = 'ac Ac aC'
+      const newText = text.replace(/ac/gi, 'AC')
+      console.log(newText) // AC AC AC
+    </script>
+  </body>
+</html>

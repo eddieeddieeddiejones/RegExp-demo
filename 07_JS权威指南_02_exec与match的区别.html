@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+    // exec与match有什么不同
+    // match方法的参数是一个全局正则表达式（含有修饰符g）时，会返回由所有匹配结果组成的一个数组，而exec无论有没有修饰符g，都只是返回一个匹配结果
+    console.log(/\w{3}\d?/.test('aaa')) // true
+    console.log('aa java '.match(/\s+java\s+/)) // [" java ", index: 2, input: "aa java "]
+    console.log('aa java a java '.match(/\s+java\s+/g)) // [" java ", " java "]
+    console.log(/\s+java\s+/g.exec('aa java a java ')) // [" java ", index: 2, input: "aa java a java "]
+    console.log(/\s+java\s+/.exec('aa java a java ')) // [" java ", index: 2, input: "aa java a java "]
+    </script>
+  </body>
+</html>

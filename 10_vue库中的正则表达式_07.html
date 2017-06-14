@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>  
+<script>
+  // vue源码
+  /**
+   * Use function string name to check built-in types,
+   * because a simple equality check will fail when running
+   * across different vms / iframes.
+   */
+  function getType (fn) {
+    var match = fn && fn.toString().match(/^\s*function (\w+)/);
+    return match ? match[1] : ''
+  }
+
+  if (!/^[a-zA-Z][\w-]*$/.test(name)) {
+    // http://devdocs.io/
+    // \w Equivalent to [A-Za-z0-9_]
+    // alphanumeric 字母、数字
+    // hyphen 连字符
+    warn(
+      'Invalid component name: "' + name + '". Component names ' +
+      'can only contain alphanumeric characters and the hyphen, ' +
+      'and must start with a letter.'
+    );
+  }
+
+  var validDivisionCharRE = /[\w).+\-_$\]]/;
+
+  // https://regexper.com/#%2F%5Cb(transform%7Call)(%2C%7C%24)%2F
+  // \b单词边界，匹配一局话中的单词，仅仅是单词，不含空格，
+  var transformRE = /\b(transform|all)(,|$)/;
+
+  // sublime正则查询测试  \b(transform|all)(,|$)
+  transform
+  all
+  all,
+  transform,
+  transform,mmm
+  mmmtransform,  // 正则表达式匹配不到这个
+
+
+</script>
+  </body>
+</html>
+

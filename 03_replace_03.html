@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+      // \w+ 匹配到一段字符串
+      // \s 空格
+      var re = /(\w+)\s(\w+)/;
+      var str = 'John Smith';
+      // $1表示正则表达式中第一个括号中的内容，依次类推
+      var newstr = str.replace(re, '$2 hahaha $1');
+      console.log(newstr);  // Smith hahaha John
+    </script>
+  </body>
+</html>

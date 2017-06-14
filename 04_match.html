@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+      var str = 'For more information, see Chapter 3.4.5.1';
+      var re = /see (chapter \d+(\.\d)*)/i;
+      var found = str.match(re);
+      // Array(3)
+      // 0 :"see Chapter 3.4.5.1"
+      //  1 :"Chapter 3.4.5.1"
+      //  2 :".1"
+      //  index :22
+      //  input :"For more information, see Chapter 3.4.5.1"
+      //  length :3
+      console.log(found);
+
+    </script>
+  </body>
+</html>

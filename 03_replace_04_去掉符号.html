@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+      var username = 'J;ohnSmith;@%';
+      username = username.replace(/[^A-Za-z\d_-]+/g, '');
+      alert(username); // JohnSmith
+    </script>
+  </body>
+</html>

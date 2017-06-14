@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>  
+<script>
+  // vue源码
+  // could use https://www.w3.org/TR/1999/REC-xml-names-19990114/#NT-QName
+  // but for Vue templates we can enforce a simple charset
+  // var ncname = '[a-zA-Z_][\\w\\-\\.]*';
+  // var qnameCapture = '((?:' + ncname + '\\:)?' + ncname + ')';
+  // var startTagOpen = new RegExp('^<' + qnameCapture);
+  // var startTagClose = /^\s*(\/?)>/;
+  // var endTag = new RegExp('^<\\/' + qnameCapture + '[^>]*>');
+  // var doctype = /^<!DOCTYPE [^>]+>/i;
+  // var comment = /^<!--/;
+  // var conditionalComment = /^<!\[/;
+
+  // if (!isPlainTextElement(stackedTag) && stackedTag !== 'noscript') {
+  //   text = text
+  //     .replace(/<!--([\s\S]*?)-->/g, '$1')
+  //     .replace(/<!\[CDATA\[([\s\S]*?)]]>/g, '$1');
+  // }
+  
+
+  // =================例子 
+  // <!--([\s\S]*?)--> sublime正则搜索
+  // var str = '<!-- dsfas  --><!-- dsfas  -->'
+  // newStr = str.replace(/<!--([\s\S]*?)-->/g, '$1')
+  // console.log(newStr) //  dsfas   dsfas  
+
+  // <!\[CDATA\[([\s\S]*?)]]>  sublime正则搜索
+  // <![CDATA[ sdf .,.j]]>
+  
+  var str1 = '<![CDATA[ sdf .,.j]]>'
+  newStr1 = str1.replace(/<!\[CDATA\[([\s\S]*?)]]>/g, '$1')
+  console.log(newStr1) //  sdf .,.j 
+
+
+
+
+
+
+</script>
+  </body>
+</html>
+

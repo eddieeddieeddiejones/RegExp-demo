@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+    // console.log(/[^(]*/.exec('asdf (sadfasd')) // ["asdf ", index: 0, input: "asdf (sadfasd"]
+    // console.log('abcdcd ef abcd'.match(/(ab|cd)+|ef/g)) // ["abcdcd", "ef", "abcd"]
+    
+    // (?=),零宽断言，(?=xxx) 后面必须有xxx，\ 转义
+    console.log('abc:sdfabc'.match(/abc?(?=\:)/g)) // ["abc"]
+    // (?!),负向先行断言，(?!xxx)后面不能有xxx。可以使用sublime编辑器 ctrl + f测试
+    console.log('abcxxxdef'.match(/(abc|def)(?!xxx)/g))  // ["def"]
+    </script>
+  </body>
+</html>

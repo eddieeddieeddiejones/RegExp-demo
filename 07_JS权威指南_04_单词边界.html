@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+    // 匹配单词java。\b 单词边界 就是\w 和\W 之外的东西。 /\sjava\s/ 有bug ,匹配不到一行开头的java,而且匹配到的单词前后带有空格，这不是我们想要的
+    // \sjava\s sublime搜索
+    //java java
+    // console.log('javahaha:sadf java script'.match(/\bjava\b/ig)) // ["java"]
+    // console.log('java haha:sadf java script'.match(/\sjava\s/ig)) // [" java "]
+    </script>
+  </body>
+</html>

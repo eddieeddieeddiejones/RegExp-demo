@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+      // 将英文 引号转化为中文引号
+      var quote = /"([^"]*)"/g
+      var str = '"sadf""sdfs"'
+      // $1 指的是括号中的内容
+      var newStr = str.replace(quote, "“$1”")
+      console.log(newStr) // “sadf”“sdfs”
+
+      // match方法
+      var matches = '1 plus 2 plus 3'.match(/\d+/g)
+      console.log(matches) // ["1", "2", "3"]
+    </script>
+  </body>
+</html>

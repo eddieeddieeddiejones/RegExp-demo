@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>  
+    <script>
+      /**
+       * Parse simple path.
+       */
+      // var bailRE = /[^\w.$]/;
+      // function parsePath (path) {
+      //   if (bailRE.test(path)) {
+      //     return
+      //   }
+      //   var segments = path.split('.');
+      //   return function (obj) {
+      //     for (var i = 0; i < segments.length; i++) {
+      //       if (!obj) { return }
+      //       obj = obj[segments[i]];
+      //     }
+      //     return obj
+      //   }
+      // }
+
+
+      var bailRE = /[^\w.$]/;
+      function parsePath (path) {
+        if (bailRE.test(path)) {
+          return
+        }
+        var segments = path.split('.');
+        return function (obj) {
+          for (var i = 0; i < segments.length; i++) {
+            if (!obj) { return }
+            obj.push(segments[i])
+          }
+          return obj
+        }
+      }
+
+      var path = 'www.a.com'
+      var haha = []
+      console.log(parsePath(path)(haha))  //  ["www", "a", "com"]
+
+    </script>
+  </body>
+</html>

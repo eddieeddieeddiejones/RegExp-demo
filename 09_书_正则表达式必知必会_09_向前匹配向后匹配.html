@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>  
+    <script>
+      // 向前查找
+      (?=xxx),匹配xxx之前内容
+      https://www.a.com
+      .+(?=:) // sublime 正则搜索
+      .+(=:) // sublime 搜索对比，看有什么不同
+
+      2yuan
+      3yuan
+      22
+      // 负向前查找
+      [0-9]+(?!(yuan))
+
+      
+      $2.12
+      $1.12
+      213
+      // 向后查找
+      (?<=\$)[0-9.]+ // sublime 正则搜索
+
+      $1
+      $2
+      2
+      // 
+      (?<!\$)[0-9] // sublime 正则搜索
+
+      // 总结
+      (?=) // 向前查找
+      (?!) // 负向前查找
+      (?<=) // 向后查找
+      (?<!) // 负向后查找
+      
+    </script>
+  </body>
+</html>

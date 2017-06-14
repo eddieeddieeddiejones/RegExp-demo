@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+  <!-- sadf --><!-- sdfa -->
+  <!-- sdfdsg -->
+    <script>
+      // aaaaaaaa
+      // 在*+等后面加上?，表示非贪婪模式，就是尽可能少的去匹配
+      // aaa+?  // sublime搜索查看匹配结果
+      // *+等是贪婪模式，就是尽可能多的去匹配
+      // aaa+  // sublime搜索查看匹配结果
+
+
+
+      // 实际应用。
+      // sublime搜索查看匹配结果
+      // <\!-{2,}(.*?)-{2,}>
+      // <\!-{2,}(.*)-{2,}>
+      // var str = '<!-- sadf --><!-- sdfa -->'
+      // var newStr = str.replace(/<\!-{2,}(.*?)-{2,}>/g, '<!-- haha$1-->')
+      // console.log(newStr)  // <!-- haha sadf --><!-- haha sdfa -->
+      
+      // var str1 = '<!-- sadf --><!-- sdfa -->'
+      // var newStr1 = str1.replace(/<\!-{2,}(.*)-{2,}>/g, '<!-- haha$1-->')
+      // console.log(newStr1) // <!-- haha sadf --><!-- sdfa -->
+    </script>
+  </body>
+</html>

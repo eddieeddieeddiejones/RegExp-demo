@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>sdf</h1><h3>dfg</h3>
+    <h2>sdf</h2>
+    <script>
+    // 回溯索引，\1代表的就是正则表达式中第一个括号中的内容，就是([1-6])
+    // <[Hh]([1-6])>.*?</[Hh]\1>  // sublime搜索查看匹配结果
+
+    var str = '<h1>sdf</h1><h3>dfg</h3>'
+    var re = /<[Hh]([1-6])>.*?<\/[Hh]\1>/g
+    console.log(str.match(re)) // ["<h1>sdf</h1>", "<h3>dfg</h3>"]
+
+    var str1 = 'aa'
+    var re1 = /(a)\1/
+    console.log(str1.match(re1))  // ["aa", "a", index: 0, input: "aa"]
+    </script>
+  </body>
+</html>

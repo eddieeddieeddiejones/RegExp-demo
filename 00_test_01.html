@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+var hyphenateRE = /([^-])([A-Z])/g;
+var hyphenate = cached(function (str) {
+  return str
+    .replace(hyphenateRE, '$1-$2')
+    .replace(hyphenateRE, '$1-$2')
+    .toLowerCase()
+});
+
+
+/**
+ * Hyphenate a camelCase string.
+ */
+var hyphenateRE = /([^-])([A-Z])/g;
+var hyphenate = cached(function (str) {
+  return str
+    .replace(hyphenateRE, '$1-$2')
+    .replace(hyphenateRE, '$1-$2')
+    .toLowerCase()
+});
+
+
+/**
+ * Parse simple path.
+ */
+var bailRE = /[^\w.$]/;
+function parsePath (path) {
+  if (bailRE.test(path)) {
+    return
+  }
+  var segments = path.split('.');
+  return function (obj) {
+    for (var i = 0; i < segments.length; i++) {
+      if (!obj) { return }
+      obj = obj[segments[i]];
+    }
+    return obj
+  }
+}
+
+
+var hasConsole = typeof console !== 'undefined';
+var classifyRE = /(?:^|[-_])(\w)/g;
+var classify = function (str) { return str
+  .replace(classifyRE, function (c) { return c.toUpperCase(); })
+  .replace(/[-_]/g, ''); };
+
+warn = function (msg, vm) {
+  if (hasConsole && (!config.silent)) {
+    console.error("[Vue warn]: " + msg + (
+      vm ? generateComponentTrace(vm) : ''
+    ));
+  }
+};
+
+
+if (!name && file) {
+  var match = file.match(/([^/\\]+)\.vue$/);
+  name = match && match[1];
+}
+
+
+// Browser environment sniffing
+var inBrowser = typeof window !== 'undefined';
+var UA = inBrowser && window.navigator.userAgent.toLowerCase();
+var isIE = UA && /msie|trident/.test(UA);
+var isIE9 = UA && UA.indexOf('msie 9.0') > 0;
+var isEdge = UA && UA.indexOf('edge/') > 0;
+var isAndroid = UA && UA.indexOf('android') > 0;
+var isIOS = UA && /iphone|ipad|ipod|ios/.test(UA);
+var isChrome = UA && /chrome\/\d+/.test(UA) && !isEdge;
+
+
+var simpleCheckRE = /^(String|Number|Boolean|Function|Symbol)$/;
+
+
+/**
+ * Use function string name to check built-in types,
+ * because a simple equality check will fail when running
+ * across different vms / iframes.
+ */
+function getType (fn) {
+  var match = fn && fn.toString().match(/^\s*function (\w+)/);
+  return match ? match[1] : ''
+}
+
+if (!/^[a-zA-Z][\w-]*$/.test(name)) {
+  warn(
+    'Invalid component name: "' + name + '". Component names ' +
+    'can only contain alphanumeric characters and the hyphen, ' +
+    'and must start with a letter.'
+  );
+}
+
+var validDivisionCharRE = /[\w).+\-_$\]]/;
+
+
+var transformRE = /\b(transform|all)(,|$)/;
+
+
+// could use https://www.w3.org/TR/1999/REC-xml-names-19990114/#NT-QName
+// but for Vue templates we can enforce a simple charset
+var ncname = '[a-zA-Z_][\\w\\-\\.]*';
+var qnameCapture = '((?:' + ncname + '\\:)?' + ncname + ')';
+var startTagOpen = new RegExp('^<' + qnameCapture);
+var startTagClose = /^\s*(\/?)>/;
+var endTag = new RegExp('^<\\/' + qnameCapture + '[^>]*>');
+var doctype = /^<!DOCTYPE [^>]+>/i;
+var comment = /^<!--/;
+var conditionalComment = /^<!\[/;
+
+if (!isPlainTextElement(stackedTag) && stackedTag !== 'noscript') {
+  text = text
+    .replace(/<!--([\s\S]*?)-->/g, '$1')
+    .replace(/<!\[CDATA\[([\s\S]*?)]]>/g, '$1');
+}
+
+
+var defaultTagRE = /\{\{((?:.|\n)+?)\}\}/g;
+var regexEscapeRE = /[-.*+?^${}()|[\]\/\\]/g;
+
+var buildRegex = cached(function (delimiters) {
+  var open = delimiters[0].replace(regexEscapeRE, '\\$&');
+  var close = delimiters[1].replace(regexEscapeRE, '\\$&');
+  return new RegExp(open + '((?:.|\\n)+?)' + close, 'g')
+});
+
+
+var onRE = /^@|^v-on:/;
+var dirRE = /^v-|^@|^:/;
+var forAliasRE = /(.*?)\s+(?:in|of)\s+(.*)/;
+var forIteratorRE = /\((\{[^}]*\}|[^,]*),([^,]*)(?:,([^,]*))?\)/;
+
+var argRE = /:(.*)$/;
+var bindRE = /^:|^v-bind:/;
+var modifierRE = /\.[^.]+/g;
+
+var ieNSBug = /^xmlns:NS\d+/;
+var ieNSPrefix = /^NS\d+:/;
+
+
+var fnExpRE = /^\s*([\w$_]+|\([^)]*?\))\s*=>|^function\s*\(/;
+var simplePathRE = /^\s*[A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*|\['.*?']|\[".*?"]|\[\d+]|\[[A-Za-z_$][\w$]*])*\s*$/;
+
+
+// strip strings in expressions
+var stripStringRE = /'(?:[^'\\]|\\.)*'|"(?:[^"\\]|\\.)*"|`(?:[^`\\]|\\.)*\$\{|\}(?:[^`\\]|\\.)*`|`(?:[^`\\]|\\.)*`/g;
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+      // 没找到返回-1
+      console.log('javascript'.search(/script/g))  // 4
+      // search方法可能不支持/script/g，不支持全局模式
+      console.log('javascript helloscript'.search(/script/g))  // 4
+    </script>
+  </body>
+</html>

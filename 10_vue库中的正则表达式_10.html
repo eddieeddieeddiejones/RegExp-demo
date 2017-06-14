@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>  
+<script>
+  // vue源码
+  var onRE = /^@|^v-on:/;
+  var dirRE = /^v-|^@|^:/;
+  var forAliasRE = /(.*?)\s+(?:in|of)\s+(.*)/;
+  var forIteratorRE = /\((\{[^}]*\}|[^,]*),([^,]*)(?:,([^,]*))?\)/;
+  
+  // =============例子
+  // @|^v-on: sub
+v-on: lime正则搜索
+@
+
+  // (.*?)\s+(?:in|of)\s+(.*)  sublime正则搜索
+  // (.*)\s+(?:in|of)\s+(.*)  sublime正则搜索
+  sdf  in sdfasdf
+sdf  in sdfasdf  
+ in sdfasdf
+
+ // /\((\{[^}]*\}|[^,]*),([^,]*)(?:,([^,]*))?\)/
+ // https://regexper.com/#%2F%5C((%5C%7B%5B%5E%7D%5D*%5C%7D%7C%5B%5E%2C%5D*)%2C(%5B%5E%2C%5D*)(%3F%3A%2C(%5B%5E%2C%5D*))%3F%5C)%2F
+
+
+
+</script>
+  </body>
+</html>
+

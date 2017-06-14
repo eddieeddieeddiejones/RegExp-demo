@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+    var username = 'java,.$!!!b'
+    // []表示一个字符
+    // [^a]表示这个字符不是a
+    // [a]+表示至少一个a
+    // /[a]/g表示替换字符串中所有的a。\d表示数字
+    username = username.replace(/[^A-Za-z\d_-]+/g, '')
+    console.log(username) // javab
+    </script>
+  </body>
+</html>

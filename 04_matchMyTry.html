@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+    var str = 'for more information, see Chapeter 3.4.5.1'
+    var re = /see (chapeter \d+(\.\d)*)/i
+    var found = str.match(re)
+    ﻿
+    04_matchMyTry.html:11 
+    // Array(3)
+    // 0: "see Chapeter 3.4.5.1"
+    // 1: "Chapeter 3.4.5.1"
+    // 2: ".1"
+    // index: 22
+    // input: "for more information, see Chapeter 3.4.5.1"
+    // length: 3
+    console.log(found)
+    </script>
+  </body>
+</html>

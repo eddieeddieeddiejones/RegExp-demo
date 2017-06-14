@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+      // 全局搜索，不区分大小写
+      var re = /apples/gi;
+      var str = 'Apples are round, and apples are juicy.';
+      var newstr = str.replace(re, 'oranges');
+      console.log(newstr);  // oranges are round, and oranges are juicy.
+    </script>
+  </body>
+</html>

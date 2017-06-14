@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+      var names = 'aa ; sdf; sdf ; sdf ;sdf'
+      var re = /\s*;\s*/
+      var nameList = names.split(re)
+      // ["aa","sdf","sdf","sdf","sdf"]
+      console.log(JSON.stringify(nameList))
+    </script>
+  </body>
+</html>

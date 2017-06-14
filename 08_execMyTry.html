@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+      var matches = /hello (\S+)/.exec('this is hello world!')
+      // ["hello world!", "world!", index: 8, input: "this is hello world!"]
+      console.log(matches)
+
+      // exec 如果没有匹配到返回null，不管正则表达式中有没有g修饰符，都会返回相同的数组
+      // ["hello world!", "world!", index: 8, input: "this is hello world! hello hahaha"]
+      var matches2 = /hello (\S+)/.exec('this is hello world! hello hahaha')
+      console.log(matches2)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+      // 在ES3规范中一个正则表达式直接量会在执行到它时转换为一个RegExp对象，同一段代码的正则表达式直接量的每次运算都返回同一个对象。而ES5做了相反的规定。用下面这段代码做比较。
+      function getRE() {
+          var re = /[a-z]/;
+          re.foo = 'bar';
+          return re;
+      }
+
+      var reg = getRE();
+      re2 = getRE();
+      console.log(reg === re2); // 在ES3中返回true，在ES5中返回false
+      reg.foo = 'baz';
+      console.log(re2.foo); // 在ES3中返回'baz'，在ES5中返回'bar'
+      // 如何演示在ES5中的结果？？？？？？？？？？？？？？？？？？
+    </script>
+  </body>
+</html>

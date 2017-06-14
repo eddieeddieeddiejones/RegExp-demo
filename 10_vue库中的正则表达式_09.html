@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>  
+<script>
+  // vue源码
+  var defaultTagRE = /\{\{((?:.|\n)+?)\}\}/g;
+  var regexEscapeRE = /[-.*+?^${}()|[\]\/\\]/g;
+
+  var buildRegex = cached(function (delimiters) {
+    var open = delimiters[0].replace(regexEscapeRE, '\\$&');
+    var close = delimiters[1].replace(regexEscapeRE, '\\$&');
+    return new RegExp(open + '((?:.|\\n)+?)' + close, 'g')
+  });
+  
+  // =============例子
+  // https://regexper.com/#%2F%5C%7B%5C%7B((%3F%3A.%7C%5Cn)%2B%3F)%5C%7D%5C%7D%2Fg
+  // /\{\{((?:.|\n)+?)\}\}/g  sublime正则搜索
+  {{df}}
+  {{
+
+  }}
+
+  {{}}
+
+  // /[-.*+?^${}()|[\]\/\\]/g  sublime正则搜索
+  // https://regexper.com/#%2F%5B-.*%2B%3F%5E%24%7B%7D()%7C%5B%5C%5D%5C%2F%5C%5C%5D%2Fg
+  
+
+
+
+
+
+
+</script>
+  </body>
+</html>
+
