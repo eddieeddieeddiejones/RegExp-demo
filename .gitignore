@@ -1,9 +1,10 @@
 .DS_Store
 node_modules/
-01_[JavaScript权威指南(第6版)].源代码/
+01_JavaScript权威指南(第6版)源代码/
 03_example/
 dist/
 04_other/
+02_book/
 npm-debug.log
 yarn-error.log
 debug.log

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+      // sublime ctrl+h 查找替换
+      // 000-1111-2222
+      // (000)-1111-2222 // 结果
+      // (\d{3})-(\d{4})-(\d{4})
+      // ($1)-$2-$3
+
+      var str = '000-1111-2222'
+      var re = /(\d{3})-(\d{4})-(\d{4})/
+      var newStr = str.replace(re, '($1)-$2-$3')
+      console.log(newStr) // (000)-1111-2222
+
+    </script>
+  </body>
+</html>
